@@ -57,7 +57,7 @@
         if (!storage) return;
         ttl = storage.getItem(cacheKey + 'cachettl');
 
-        if (cacheValid && typeof cacheValid === 'function' && !cacheValid()){
+        if (cacheValid && typeof cacheValid === 'function' && !cacheValid(ttl)){
             storage.removeItem(cacheKey);
         }
 
