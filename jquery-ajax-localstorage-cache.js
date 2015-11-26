@@ -82,8 +82,7 @@
                     storage.setItem(cacheKey, strdata);
                 } catch (e) {
                     // Remove any incomplete data that may have been saved before the exception was caught
-                    storage.removeItem(cacheKey);
-                    storage.removeItem(cacheKey + 'cachettl');
+                    storage.clear();
                     console.log('Cache Error:'+e, cacheKey, strdata );
                 }
 
